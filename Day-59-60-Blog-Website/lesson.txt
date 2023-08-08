@@ -1,0 +1,9 @@
+Instead of rewriting the same structure for each webpage of our website.
+We can use templates to ease our work.
+With the help of Jinja, we can use html file as template.
+By using the template, we can give the structure to a webpage without writing code for it.
+We just need to include the template into the current file for the webpage having the same structure.
+In order to it, we can take the help of syntax:-
+{% include "template_name" %}
+The template_name has required code for the structure.
+Where we put the syntax, the code in that template will be placed at that place.

@@ -1,0 +1,27 @@
+In this lesson, we want to hold the url that user has entered.
+You might want to hold the path in order to achieve a certain functionality.
+Dependent on the route, the user has gone, we will show them different results.
+The route() a decorator function, lives inside the app object that is the object of Flask().
+What if we want to have a variable inside of url.
+Means we want to hold what user types in the url, here that variable will act as a placeholder for that.
+Now, if we want to add variable inside of an url, we need to follow a syntax:- <variable_name>
+Then, the function on which decorator being applied is gonna receive the variable that you have passed inside of the decorator.
+Now, the next thing is, everytime, we make changes to our code, we need to stop the server and again start it in order to reflect the changes.
+In order to get rid off it, we need to activate debuggger mode.
+Debugger mode comes with advantages such as activating debuggger to solve the problems, activating automatic reloader.
+Automatic reloader helps us to avoid stop and rerun the server. Whenever we edit our code, it reloads the server.
+In order to enable debug mode, we need to do:- app.run(debug=True).
+So, whenever, debugger feels of an error in the url, it gives us an error, explaining where it lies.
+When debugger detects an error in the code, it gives us an error, to solve it we can use flask debugger.
+We can do that by clicking on the button on the right side of the section where it explains the error.
+By clicking on the button, first we need to enter a debuggin pin, then it opens a console to debug the problem.
+NOTE:- Here, we have option to convert variable into any kind of datatype we want.
+Syntax:- <converter.variable_name>, converter can be int, str, float.
+
+Now, how to render html on the website.
+Currently, we are returning the string then flask turn it into html document and stuffed it into body tag.
+Flask allows us to add html tags along the string.
+
+It is simple to call out the function that does not take any input.
+But it becomes complicated, when we need to pass inputs to the function or need to check condition before calling any function.
+To resolve it, we can use *args or **kwargs.

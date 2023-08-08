@@ -1,0 +1,58 @@
+From now, we are going to focus on the web development part.
+Website development can be divided into two parts such as frontend web development and backend web development.
+Front end development is more like what the users see on their side.
+To learn frontend development, you need to learn html and css.
+To learn backend development, you have the option to choose amongst many languages such as java, python, ruby etc.
+In addition to these choices, you have choices between frameworks that comes with lot of codes that can be used
+to achieve common requirements. You have choices between angular and react for frontend part.
+You have options between django, flask, and many more for backend part.
+Flask is more beginner friendly and can be used for smaller scale projects whereas Django is used for more commercial projects.
+There are three components that determine how your backend works, they are client, server and database.
+Client is a user that makes the request to see a webpage through browser.
+Server is a kind of computer that is available 24/7 and connected to the internet to facilitate the user services.
+Database is a kind of souped up spreadsheet that contains the information related to your website.
+When client makes the request that request goes to the server.
+Server will have the html, css, and js files to render the requested webpage.
+If your required webpage requires the data then server will retrive that data from the database and put it into the html, css and js files. 
+After it, server will send the files to the browser.
+
+Now, talking about flask.
+Flask is the one of the most popular web development framework.
+Now, coming to the differences between the library and framework.
+Both library and framework contain package of codes that are pre-built.
+We call library and command it to to get common functionality.
+But, while using framework, we write code that follows the rule of framework. 
+Here, framework call the methods that we write when a certain situation comes up.
+Therefore, we need to plan ahead for these situations. What would happen if this situation happens.
+Like for example, what would happen if the user goes to our website, what function should run.
+In order to run your web application, you need to set an environment variable called FLASK_APP and need to set to the name of the file which contains the server.
+Now, after it, run command "flask run", it sets up the sever, and starts serving the application.
+As a result, you will get the url to go to the website.
+
+Now, we will talk about terminal.
+Terminal is a powerful tool that is used in order to type commands one at a time to control the computer.
+It is also known as command line and that can be referred as shell.
+The core of the operating system is kernal.
+Kernal is an actual program that works as an interface in order to interact with the hardware of your computer to make it do what do you want.
+Shell is an user interface for the user to interact with the kernal and in turn kernal will interact with the hardware.
+Shell is kind of two types such as graphical user interface shell and command line user interface shel.
+So, why use command line interface when you can do the same things with the GUI.
+Well, the main focus is on getting the more control over your computer.
+In CLI, you can do the same things with ease and directly in less time.
+
+Now talking about how to use decorator function
+First define it, give it a name, pass the "function" as template that we want to modify.
+Inside of the decorator function, we will have nested function.
+The nested function will trigger the function that is passed.
+After all of these, we will return the nested function.
+Overall, Decorator function is a kind of function that wraps another function and give it a meaningful function.
+You can add the functionality before or after the target function triggered by the nested function.
+You can even make the function callable twice.
+How to apply the decorator function to a function.
+You just need to simply put the decorator before the function that needs to be modified.
+Syntax:- @decorator_name
+@ is called as syntatical sugar. It helps us to write an alternative line of code.
+There is another way to apply the decorator to a function.
+You just need to pass the function's name in the decorator defined and call it.
+It will give you the modified function as an output, to store the output, create a variable.
+Then call the variable as a function.
