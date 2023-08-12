@@ -1,0 +1,70 @@
+Authentication:- Why is it necessary?
+Authentication is necessary because having website means dealing with the users.
+Users are generating data in the website.
+In order to associate data with their respective creators, we need to create user accounts.
+So, each user would sign up into the website using username and password.
+It creates an unique ID for each user who signs up in the database along with the data they created.
+Therefore, in this way, they can access their private piece of information instead of being accessed by each and every user.
+
+One more reason to add Authentication is to restrict access to the important piece of information.
+
+The first level to provide security to the users is Encryption.
+In encryption, we previously saw that the data is stored in the plain text form in the database.
+As, we all know, it would not be easy to get access to the server and database.
+But, it does not make sure the security entirely.
+The level two is Authentication, it involves encryption.
+Encryption means, scrambling the original data in a form that can't be understood by the outsiders unless they don't know
+how to unscramble it.
+In order to encypt the message, you need to have a key used to encrypt it.
+The same key can be used to decode the message.
+So, if anyone gets the key in his hands, then it would become handy for him to grab the sensitive info.
+
+Hashing:- the next level
+In hashing, we don't need key to encrypt info.
+If we don't have any key then, we can't even decrypt it. But, while providing security to the user.
+We don't need to decrypt their private sensitive data.
+In hashing, we use Hashing function(mathematical equation) to convert info into hash, which will be stored into the database.
+But, you can't use the same hashing function to convert the hash into its original form.
+
+We use hashing function to convert the password entered by the user while registering into the website, into the hash value.
+That will be stored into the database.
+So, when user tries to login into the website, then we will use the hashing function to convert the login password into the hash value.
+The generated hash value will be compared with the hash value stored into the password.
+
+How the hackers hack the passwords?
+So, Most probably, we are considering that the accounts that are hacked, their passwords are stored in the form of
+hash values in the database.
+In order to understand the hash value, they create hash table, starting with most commonly used passwords, and turn
+them into hash value using same hashing function used for the hacked passwords.
+But what if the user did not use common password, then what hacker will do?
+In this case, hacker starts with the dictionary words and convert them into hash values.
+Then, hacker will add all the numbers from the telephone book into the hash table.
+Then, he will check all the possible combinations of characters upto 6 places considering that the password contains 6 characters.
+All of these leads to 19.8 billion possiblities.
+With the helo of latest GPU, a hacker can check at least 20 billion possiblities per second.
+Then, what can be done in these vulnerable scenario?
+Well, you can consider hashing function as mathematical formula.
+As long as the number of characters in the password increases, the computation to crack it will be increased too.
+
+To make the passwords more secure than it is through hashing, we can use salting.
+As, we know, we humans have tendency to use common words or dictionary words, due to this, it can be exposed to 
+dictionary attacks.
+In salting, we take password and in addition to it, we generate a random set of characters.
+We combine the password and random set with each other, and put them through hash function.
+So, the resultant hash value is generated from the password entered by the user and random set of characters that 
+we call salt.
+So, how much the simple password would be, adding salt to the password will increase the characters number and complexity.
+So, even if the user uses common password but adding salt to it, will make it unique.
+The salt will be stored into the database.
+So, when the user login with the password, you will combine the salt stored into the database.
+Compare the hash value generated from it with the hash value stored into the database.
+
+But even, with the help of salting, with the latest GPU, it can't make that big difference.
+So, to make it harder, we can use different hashing algorithm i.e. bcrypt that is increadibly slow.
+To make the password more secure, we can use "salt rounds".
+When we put the password with the random set(salt) and apply hash function to it, that's one round of salting.
+If we want to do one more round, we take the hash value generated from the first round and add the same salt(random set)
+into it, and apply the hash function and new hash value will be generated. If we want to do more rounds, 
+the same process will be followed.
+How many times, we repeat this process will be the number of rounds of salting.
+As, the computer power is increasing, the salting rounds should be increased too. 
